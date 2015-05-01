@@ -6,6 +6,14 @@
 //  Copyright (c) 2015 Daniel Dayley. All rights reserved.
 //
 
+
+
+/* *Create a method called "dictionaryForMe" that returns an NSDictionary. In that method instantiate a dictionary.
+   *Set NSString values for @"firstName,@"lastName",@"birthMonth",@"birthDay"
+   *Set NSNumber values (hint: try using @(number to create an NSNumber) for your @"age",
+ 
+ */
+
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -16,8 +24,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    
+    NSDictionary *myDictionary = [self dictionaryForMe2];
+    NSLog(@"%@",myDictionary);
+    
+    
     return YES;
+}
+//  Create a method called "dictionaryForMe" that returns an NSDictionary. In that method instantiate a dictionary.
+- (NSDictionary *)dictionaryForMe {
+//  Set NSString values for @"firstName,@"lastName",@"birthMonth",@"birthDay" Set NSNumber values
+    NSDictionary *returnDictionary = [[NSDictionary alloc] initWithObjectsAndKeys: @"firstName", @"Daniel", @"lastName", @"Dayley", @"age", @(21), @"birthMonth", @(5), @"birthDay", @(25), nil];
+    return returnDictionary;
+}
+
+- (NSDictionary *)dictionaryForMe2 {
+    NSDictionary *returnDictionary = [NSDictionary dictionaryWithObjectsAndKeys: @"firstName", @"Daniel", @"lastName", @"Dayley", @"age", @(21), @"birthMonth", @(5), @"birthDay", @(25), nil];
+    return returnDictionary;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

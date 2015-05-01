@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (NSDictionary *)dictionaryForMe;
+- (NSDictionary *)dictionaryForMe2;
 
 @end
 
